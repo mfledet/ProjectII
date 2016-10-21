@@ -1,0 +1,407 @@
+
+$myColor: rgb(184, 134, 11);
+$font-stack: 'Amatic SC',
+cursive;
+
+.heading {
+    text-align: center;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 50px;
+    display: inline-block center;
+}
+
+h1 {
+    color: black;
+    font-family: 'Leckerli One', cursive;
+    text-align: center;
+    font-size: 40px;
+    display: inline-block center;
+}
+
+.cathexpander {
+    position: relative;
+    //background-color: cadetblue;
+    width: 400px;
+    margin: auto;
+    
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+    
+    margin-bottom: 60px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    
+    perspective: 1000px;
+    p {
+        font-size: 30px;
+        button {
+            background-color: slategray;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: $font-stack;
+            cursor: pointer;
+        }
+    }
+}
+
+.cathexpander:hover {
+    //-color: $myColor;
+    transition: 0s all;
+    cursor: pointer;
+    text-decoration: underline white;
+    h2 {
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+}
+
+.bkrndimg {
+    background-image: url(bkrnd3.jpeg);
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+audio controls {
+    object-position: bottom right;
+    background-attachment: scroll;
+}
+
+.cathexpander p {
+    display: none;
+}
+
+.capexpander p{
+    display: none;
+}
+
+.glacexpander p{
+    display: none;
+}
+
+.domexpander p{
+    display: none;
+}
+
+
+#flipButton:hover {
+    background-color: darkmagenta;
+}
+
+/******** NEW! ********/
+// This is all new - it basically moves a lot of the styles from the "expander" to both the front and back parts
+// That's because we want the front and back to have the same width, height, radius, border, etc...
+.cathedralfront, .cathedralback{
+    border-radius: 50% / 10%;
+    background-color: cadetblue;
+    backface-visibility: hidden;
+    width: 400px;
+    
+    border: double;
+    border-width: medium;
+    padding: 25px;
+    box-sizing: border-box;
+    
+    transition: 1s all;
+}
+.cathedralback {
+    background-image: url(cathedralpeak.jpg);
+    background-position: 66% 60%;
+    
+    /******** NEW! ********/
+    background-size: cover;// This will make it fit better
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /******** NEW! ********/
+    transform: rotateY(-180deg); // Using a negative rotation here works better
+    height: 100px;
+}
+
+.cathexpander.flipped .cathedralfront {
+    transform: rotateY(180deg);
+}
+
+.cathexpander.flipped .cathedralback {
+    transform: rotateY(0deg);
+}
+
+.capfront, .capback{
+    border-radius: 50% / 10%;
+    background-color: cadetblue;
+    backface-visibility: hidden;
+    width: 400px;
+    
+    border: double;
+    border-width: medium;
+    padding: 25px;
+    box-sizing: border-box;
+    
+    transition: 1s all;
+}
+
+.capback {
+    background-image: url(elcap.jpeg);
+    background-position: 70% 60%;
+    
+    /******** NEW! ********/
+    background-size: cover; // This will make it fit better
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /******** NEW! ********/
+    transform: rotateY(-180deg); // Using a negative rotation here works better
+    height: 100px;
+}
+
+.capexpander.flipped .capfront {
+    transform: rotateY(180deg);
+}
+
+.capexpander.flipped .capback {
+    transform: rotateY(0deg);
+}
+
+.glacierfront, .glacierback{
+    border-radius: 50% / 10%;
+    background-color: cadetblue;
+    backface-visibility: hidden;
+    width: 400px;
+    
+    border: double;
+    border-width: medium;
+    padding: 25px;
+    box-sizing: border-box;
+    
+    transition: 1s all;
+}
+
+.glacierback {
+    background-image: url(glacierpt.jpeg);
+    background-position: 55% 40%;
+    
+    /******** NEW! ********/
+    background-size: cover; // This will make it fit better
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /******** NEW! ********/
+    transform: rotateY(-180deg); // Using a negative rotation here works better
+    height: 100px;
+}
+
+.glacexpander.flipped .glacierfront {
+    transform: rotateY(180deg);
+}
+
+.glacexpander.flipped .glacierback {
+    transform: rotateY(0deg);
+}
+
+.domefront, .domeback{
+    border-radius: 50% / 10%;
+    background-color: cadetblue;
+    backface-visibility: hidden;
+    width: 400px;
+    
+    border: double;
+    border-width: medium;
+    padding: 25px;
+    box-sizing: border-box;
+    
+    transition: 1s all;
+}
+
+.domeback {
+    background-image: url(halfdome.jpeg);
+    background-position: center;
+    
+    /******** NEW! ********/
+    background-size: cover; // This will make it fit better
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    /******** NEW! ********/
+    transform: rotateY(-180deg); // Using a negative rotation here works better
+    height: 100px;
+}
+
+.domexpander.flipped .domefront {
+    transform: rotateY(180deg);
+}
+
+.domexpander.flipped .domeback {
+    transform: rotateY(0deg);
+}
+
+
+
+.youexpander {
+    position: relative;
+    background-color: darkmagenta;
+    width: 400px;
+    margin: auto;
+    border-radius: 50% / 10%;
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+    border: double;
+    border-width: medium;
+    margin-bottom: 60px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 40px;
+    padding: 25px;
+    perspective: 1000px;
+    h3 {
+        font-size: 30px;
+    }
+}
+
+textarea{
+    width: 300px;
+    height: 100px;
+}
+
+.capexpander {
+    position: relative;
+    //background-color: cadetblue;
+    width: 400px;
+    margin: auto;
+    
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+    
+    margin-bottom: 60px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    
+    perspective: 1000px;
+    p {
+        font-size: 30px;
+        button {
+            background-color: slategray;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: $font-stack;
+            cursor: pointer;
+        }
+    }
+}
+
+.capexpander:hover {
+    //-color: $myColor;
+    transition: 0s all;
+    cursor: pointer;
+    text-decoration: underline white;
+    h2 {
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+}
+
+.glacexpander {
+    position: relative;
+    //background-color: cadetblue;
+    width: 400px;
+    margin: auto;
+    
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+    
+    margin-bottom: 60px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    
+    perspective: 1000px;
+    p {
+        font-size: 30px;
+        button {
+            background-color: slategray;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: $font-stack;
+            cursor: pointer;
+        }
+    }
+}
+
+.glacexpander:hover {
+    //-color: $myColor;
+    transition: 0s all;
+    cursor: pointer;
+    text-decoration: underline white;
+    h2 {
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+}
+
+.domexpander {
+    position: relative;
+    //background-color: cadetblue;
+    width: 400px;
+    margin: auto;
+    
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+    
+    margin-bottom: 60px;
+    font-family: 'Amatic SC', cursive;
+    font-size: 50px;
+    
+    perspective: 1000px;
+    p {
+        font-size: 30px;
+        button {
+            background-color: slategray;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            font-family: $font-stack;
+            cursor: pointer;
+        }
+    }
+}
+
+.domexpander:hover {
+    //-color: $myColor;
+    transition: 0s all;
+    cursor: pointer;
+    text-decoration: underline white;
+    h2 {
+        text-decoration: underline;
+        text-decoration-color: white;
+    }
+}
+    
+    

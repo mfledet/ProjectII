@@ -1,0 +1,310 @@
+.heading {
+  text-align: center;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 50px;
+  display: inline-block center; }
+
+h1 {
+  color: black;
+  font-family: 'Leckerli One', cursive;
+  text-align: center;
+  font-size: 40px;
+  display: inline-block center; }
+
+.cathexpander {
+  position: relative;
+  width: 400px;
+  margin: auto;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  margin-bottom: 60px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  perspective: 1000px; }
+  .cathexpander p {
+    font-size: 30px; }
+    .cathexpander p button {
+      background-color: slategray;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: "Amatic SC", cursive;
+      cursor: pointer; }
+
+.cathexpander:hover {
+  transition: 0s all;
+  cursor: pointer;
+  text-decoration: underline white; }
+  .cathexpander:hover h2 {
+    text-decoration: underline;
+    text-decoration-color: white; }
+
+.bkrndimg {
+  background-image: url(bkrnd3.jpeg);
+  background-attachment: fixed;
+  background-size: cover; }
+
+audio controls {
+  object-position: bottom right;
+  background-attachment: scroll; }
+
+.cathexpander p {
+  display: none; }
+
+.capexpander p {
+  display: none; }
+
+.glacexpander p {
+  display: none; }
+
+.domexpander p {
+  display: none; }
+
+#flipButton:hover {
+  background-color: darkmagenta; }
+
+/******** NEW! ********/
+.cathedralfront, .cathedralback {
+  border-radius: 50% / 10%;
+  background-color: cadetblue;
+  backface-visibility: hidden;
+  width: 400px;
+  border: double;
+  border-width: medium;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: 1s all; }
+
+.cathedralback {
+  background-image: url(cathedralpeak.jpg);
+  background-position: 66% 60%;
+  /******** NEW! ********/
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /******** NEW! ********/
+  transform: rotateY(-180deg);
+  height: 100px; }
+
+.cathexpander.flipped .cathedralfront {
+  transform: rotateY(180deg); }
+
+.cathexpander.flipped .cathedralback {
+  transform: rotateY(0deg); }
+
+.capfront, .capback {
+  border-radius: 50% / 10%;
+  background-color: cadetblue;
+  backface-visibility: hidden;
+  width: 400px;
+  border: double;
+  border-width: medium;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: 1s all; }
+
+.capback {
+  background-image: url(elcap.jpeg);
+  background-position: 70% 60%;
+  /******** NEW! ********/
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /******** NEW! ********/
+  transform: rotateY(-180deg);
+  height: 100px; }
+
+.capexpander.flipped .capfront {
+  transform: rotateY(180deg); }
+
+.capexpander.flipped .capback {
+  transform: rotateY(0deg); }
+
+.glacierfront, .glacierback {
+  border-radius: 50% / 10%;
+  background-color: cadetblue;
+  backface-visibility: hidden;
+  width: 400px;
+  border: double;
+  border-width: medium;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: 1s all; }
+
+.glacierback {
+  background-image: url(glacierpt.jpeg);
+  background-position: 55% 40%;
+  /******** NEW! ********/
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /******** NEW! ********/
+  transform: rotateY(-180deg);
+  height: 100px; }
+
+.glacexpander.flipped .glacierfront {
+  transform: rotateY(180deg); }
+
+.glacexpander.flipped .glacierback {
+  transform: rotateY(0deg); }
+
+.domefront, .domeback {
+  border-radius: 50% / 10%;
+  background-color: cadetblue;
+  backface-visibility: hidden;
+  width: 400px;
+  border: double;
+  border-width: medium;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: 1s all; }
+
+.domeback {
+  background-image: url(halfdome.jpeg);
+  background-position: center;
+  /******** NEW! ********/
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /******** NEW! ********/
+  transform: rotateY(-180deg);
+  height: 100px; }
+
+.domexpander.flipped .domefront {
+  transform: rotateY(180deg); }
+
+.domexpander.flipped .domeback {
+  transform: rotateY(0deg); }
+
+.youexpander {
+  position: relative;
+  background-color: darkmagenta;
+  width: 400px;
+  margin: auto;
+  border-radius: 50% / 10%;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  border: double;
+  border-width: medium;
+  margin-bottom: 60px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 40px;
+  padding: 25px;
+  perspective: 1000px; }
+  .youexpander h3 {
+    font-size: 30px; }
+
+textarea {
+  width: 300px;
+  height: 100px; }
+
+.capexpander {
+  position: relative;
+  width: 400px;
+  margin: auto;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  margin-bottom: 60px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  perspective: 1000px; }
+  .capexpander p {
+    font-size: 30px; }
+    .capexpander p button {
+      background-color: slategray;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: "Amatic SC", cursive;
+      cursor: pointer; }
+
+.capexpander:hover {
+  transition: 0s all;
+  cursor: pointer;
+  text-decoration: underline white; }
+  .capexpander:hover h2 {
+    text-decoration: underline;
+    text-decoration-color: white; }
+
+.glacexpander {
+  position: relative;
+  width: 400px;
+  margin: auto;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  margin-bottom: 60px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  perspective: 1000px; }
+  .glacexpander p {
+    font-size: 30px; }
+    .glacexpander p button {
+      background-color: slategray;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: "Amatic SC", cursive;
+      cursor: pointer; }
+
+.glacexpander:hover {
+  transition: 0s all;
+  cursor: pointer;
+  text-decoration: underline white; }
+  .glacexpander:hover h2 {
+    text-decoration: underline;
+    text-decoration-color: white; }
+
+.domexpander {
+  position: relative;
+  width: 400px;
+  margin: auto;
+  color: white;
+  text-align: center;
+  text-indent: .1em;
+  margin-bottom: 60px;
+  font-family: 'Amatic SC', cursive;
+  font-size: 50px;
+  perspective: 1000px; }
+  .domexpander p {
+    font-size: 30px; }
+    .domexpander p button {
+      background-color: slategray;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      font-family: "Amatic SC", cursive;
+      cursor: pointer; }
+
+.domexpander:hover {
+  transition: 0s all;
+  cursor: pointer;
+  text-decoration: underline white; }
+  .domexpander:hover h2 {
+    text-decoration: underline;
+    text-decoration-color: white; }
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,172 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+    <script src="officialscript.js"></script>
+
+
+    <meta charset=utf-8>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale = 1">
+
+
+    <title>Yosemite</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:700|Bungee+Shade|Leckerli+One" rel="stylesheet">
+
+</head>
+
+<body class="bkrndimg">
+
+    <audio controls autoplay muted loop>
+        <source src="janrain.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+
+    </audio>
+
+    <h1 class=heading>Yosemite National Park</h1>
+    <h1> A glimpse into one of the U.S.'s most beautiful playgrounds</h1>
+
+
+    <div class="cathexpander" id="cathexpander">
+        <div class="cathedralback">
+            <!-- Don't need this button - the image should just expand whenever the expander h2 is clicked -->
+            <!--            <button id="exbutton">Expand</button>-->
+            <!-- Added this button to close the picture once it's flipped around -->
+            <button id="cathcloseButton">Close this picture</button>
+        </div>
+        <div class="cathedralfront">
+            <h2>Cathedral Rocks</h2>
+            <p>While El Capitan is better known, Cathedral Rocks and Spires is considered by many to be the most beautiful rock formations in Yosemite National Park. Their unusually symmetrical balance—appearing to be a massive, triple-rock formation—is a testament to nature’s power. Towering 2,000 feet skyward, it’s a view not to be missed.
+                <br>
+                <br>
+                <button id="cathflipButton">Click for a Pic</button>
+            </p>
+        </div>
+    </div>
+
+    <div class="capexpander" id="capexpander">
+        <div class="capback">
+            <button id="capcloseButton">Close this picture</button>
+
+        </div>
+        <div class="capfront">
+            <h2>EL Capitan</h2>
+            <p>El Capitan is opposite Bridalveil Fall and is best seen from the roads in western Yosemite Valley, including Tunnel View, Bridalveil Fall area, and El Capitan Meadow. It is always visible from Yosemite Valley—and the view is always changing with the light and with the seasons.Soaring over 3,590 feet skyward, El Capitan is a bucket list destination for elite rock climbers from around the globe. Those who are less brave can be awed at watching the climbers slowly and carefully ascend it.
+                <br>
+                <br>
+                <button id="capflipButton">Click for a Pic</button>
+            </p>
+        </div>
+    </div>
+
+    <div class="glacexpander" id="glacexpander">
+        <div class="glacierback">
+            <button id="glaccloseButton">Close this picture</button>
+
+        </div>
+
+        <div class="glacierfront">
+            <h2>Glacier Point</h2>
+            <p>Glacier Point is one of the most awe-inspiring of all Yosemite views. Perched on an outcropping of granite 3,000 feet up on the rim of the Yosemite Valley, you’ll fill your eyes with one of the greatest sights on earth—mountain peaks, waterfalls and the pristine valley below. Best of all, visitors of all ages can make it to the top via a well-traveled road in the spring and summer.
+                <br>
+                <br>
+                <button id="glacflipButton">Click for a Pic</button>
+            </p>
+        </div>
+    </div>
+
+    <div class="domexpander" id="domexpander">
+        <div class="domeback">
+            <button id="domcloseButton">Close this picture</button>
+
+        </div>
+
+        <div class="domefront">
+            <h2> Half Dome</h2>
+            <p>Half Dome, measuring 8,842 ft above sea-level, is one of the most iconic cliffs in Yosemite, known for its sheer magnitude—a smooth granite wall rising nearly a mile above the valley. In the mid 1860s, it was deemed “inaccessible” and thought to be impossible to climb. But a decade later, mountaineer George Anderson had summited the peak. Since then, hundreds of thousands of people—all fit and experienced—have reached the summit with a strenuous, challenging hike. Others reach the peak after an exhaustive climb up the cliff’s sheer face.
+                <br>
+                <br>
+                <button id="domflipButton">Click for a Pic</button>
+            </p>
+        </div>
+    </div>
+
+    <!-------- NEW! -------->
+    <!-- Put everything in a form and add the onsubmit attribute to call a JS function on submit -->
+    <form onsubmit="javascript:username()">
+        <div class="youexpander">
+            <h2>Tell Us About Yourself</h2>
+            <h3> Enter your information below: </h3>
+
+            <input type="text" name="firstname" placeholder="first name">
+            <input type="text" name="lastname" placeholder="last name">
+
+            <!--we can group radio buttions wit the name attribute-->
+
+            <h3>Gender
+            <br>
+            Female<input type="radio" name="gender" value="female">
+            Male <input type="radio" name="gender" value="male">
+            <br>
+            <p id="output">Who are You?</p>
+            
+            <br> <br>
+            <textarea id="styled">What is your favorite spot in Yosemite and why?</textarea>
+            <br><br>
+            
+             Wanna customize this page?  Select your favorite color:
+            <input type="color" name="favoriteColor">
+        </h3>
+
+            <input type="submit">
+
+        </div>
+    </form>
+
+    <h1>Thanks for visiting 
+        <span id="username"></span>
+    </h1>
+    <script>
+        function username() {
+
+            var prefix = "";
+
+            var gender = $("input[name='gender']:checked").val();
+            if(gender == "male") {
+                prefix = "Mr.";
+                $("#output").html("Why Hello, Sir")
+            } else{
+                $("#output").html("Why Hello, Ma'am");
+            }
+
+            if (gender == "female") {
+                prefix = "Miss";
+                $("#output").html("Why Hello, Ma'am")
+            } else{
+                $("#output").html("Why Hello, Sir");
+            }
+            
+            alert(gender);
+            
+
+            console.log("submiting the username");
+            alert("form submitted");
+
+
+            var fullname = $("input[name='firstname']").val() + " " + $("input[name='lastname']").val(); $("#username").html(prefix + " " + fullname);
+
+            var favoriteColor = $("input[name='favoriteColor']").val();
+            $("body").css(".cathexpander:hover", favoriteColor);
+        };
+        
+    </script>
+
+</body>
+
+</html>
